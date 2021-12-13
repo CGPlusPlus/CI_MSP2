@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Rosario:wght@700&display=swap');
+
+body {
+    margin: 0;
+    background-color: #37003A;
+    background-image: url(../images/PL_Teams_2021.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    
+    /*
+    background-color: rgb (254, 40, 129);
+    background: linear-gradient(135deg, #37003C , #FE2881) ; 
+    min-height: 100vh;*/
+    
+}
+
+html {
+    height: 100%
+}
+
+#index-heading {
+    font-family: 'Rosario', sans-serif;
+    text-align: center;
+    color: #ffffff
+}
