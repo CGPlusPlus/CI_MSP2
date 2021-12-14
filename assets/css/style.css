@@ -57,7 +57,7 @@
     -webkit-border-radius: 20px;
 }
   
-  #start-game{
+#start-game{
     text-decoration: none;
     right:35%;
 
@@ -65,6 +65,36 @@
 
 #how-to-play {
     left:40%;
+}
+
+/* Modal styling */
+
+.modal-content {
+  text-align: left;
+  color: #ffffff;
+  background: linear-gradient(40deg, #37003A, #FE2881) ; 
+  border: 1px solid #107ff7;}
+
+.modal-title {
+  text-align: center !important;
+  font-family: 'Rosario', sans-serif;
+  color: gold;
+}
+
+.modal-btn {
+  color: white;
+  font-family: 'Rosario', sans-serif;
+  font-size: 2em;
+}
+
+#game-start{
+    text-align: center !important;
+}
+
+.modal-btn:hover {
+  color: gold;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 
