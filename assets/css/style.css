@@ -105,3 +105,10 @@
     background: linear-gradient(40deg, #37003A, #FE2881) ; 
     min-height: 100vh;
 }
+
+.home-button a, .reset-button a{
+  text-decoration: none;
+  font-family: 'Rosario', sans-serif;
+  font-size: 2em;
+  color: #107ff7;
+}
