@@ -101,8 +101,12 @@ document.addEventListener('DOMContentLoaded', () =>{
     gameCards.sort(() => 0.5 - Math.random())
 
     const grid = document.querySelector('.grid')
+    
+    // arrays for comparing cards and comparing cards IDs
     var cardsToCompare = []
-    var cardsToCompareID = []
+    var cardsToCompareId = []
+
+
 
 
     //create game board
@@ -112,7 +116,7 @@ document.addEventListener('DOMContentLoaded', () =>{
             var card = document.createElement('img')
             card.setAttribute('src', 'assets/images/prem-logo-blend.png')
             card.setAttribute('data-id', i)
-            card.addEventListener('click', flipcard)
+            card.addEventListener('click', flipCard)
             grid.appendChild(card)
         }
 
@@ -120,10 +124,10 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 
     // flip card function
-    function flipcard(){
+    function flipCard(){
         var cardId = this.getAttribute('data-id')
-        cardsToCompare.push(gameCard[cardId].name)
-        cardsToCompareID.push(cardId)
+        cardsToCompare.push(gameCards[cardId].name)
+        cardsToCompareId.push(cardId)
         this.setAttribute('src', gameCards[cardId].img)
 
         if (cardsToCompare === 2){
