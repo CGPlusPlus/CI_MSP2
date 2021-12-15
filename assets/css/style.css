@@ -61,8 +61,7 @@
 
 #start-game:hover, #how-to-play:hover {
   color: #107ff7;
-  }
-
+}
 
 /* Modal styling */
 
@@ -96,7 +95,6 @@
 
 
 /* Game page styling */
-
 #game-body {
   margin: 0;
   background: linear-gradient(45deg, #37003A, 75%, #FE2881) ; 
@@ -109,6 +107,12 @@
   justify-content: center;
   margin-top: 2.5%;
 }
+.home-button {
+  margin-right:2.5%;
+}
+.reset-button {
+  margin-left:2.5%;
+}
 
 .home-button a, .reset-button a{
   text-decoration: none;
@@ -118,19 +122,11 @@
   text-align: center;
 }
 
-.home-button {
-  margin-right:2.5%;
-}
-.reset-button {
-  margin-left:2.5%;
-}
-
 #game-data {
   width:100%;
   display: flex;
   justify-content: center;
   margin-top: 2.5%;
-
 }
 
 .data-flip, #data-time {
@@ -155,4 +151,19 @@
 
 #data-time {
   margin-left: 5%;
+}
+
+/* Game - Card grid*/
+
+.game-grid{
+  width:100%;
+  display: flex;
+  justify-content:center;
+}
+
+.grid{
+  display:flex;
+  flex-wrap: wrap;
+  height:400px;
+  width:500px;
 }
