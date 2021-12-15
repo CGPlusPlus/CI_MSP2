@@ -3,69 +3,66 @@
 /* Index page styling */
 
 #index-body {
-    margin: 0;
-    background-color: #37003A;
-    background-image: url(../images/PL_Teams_2021.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center; 
+  margin: 0;
+  background-color: #37003A;
+  background-image: url(../images/PL_Teams_2021.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
 }
 
 #index-heading {
-    font-family: 'Rosario', sans-serif;
-    text-align: center;
-    color: #ffffff
+  font-family: 'Rosario', sans-serif;
+  text-align: center;
+  color: #ffffff
 }
 
 #index-heading a{
-    text-decoration: none;
-    color: #ffffff
+  text-decoration: none;
+  color: #ffffff
 }
 
 #index-heading a:hover{
-    text-decoration: none;
-    text-transform: uppercase;
+  text-decoration: none;
+  text-transform: uppercase;
 }
 
 #index-buttons {
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    margin: 0.625rem;
+  justify-content: center;
+  display: flex;
+  margin: 0.625rem;
 }
   
 #start-game, #how-to-play{
-    position:absolute;
-    bottom: 5%;
-    color: black;
-    padding: 8px 0 8px 0;
-    background: #FE2881;
-    
-    border: 1px solid #107ff7;
-    border-radius: 20px;
+  position:absolute;
+  bottom: 5%;
+  color: black;
+  padding: 8px 0 8px 0;
+  background: #FE2881;
+  
+  border: 1px solid #107ff7;
+  border-radius: 20px;
 
-    text-decoration: none;
-    font-size: 1.25rem;
-    font-family: 'Rosario', sans-serif;
-    text-align: center;
-    width: 150px;
-
-    -moz-border-radius: 20px;
-    -webkit-border-radius: 20px;
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-family: 'Rosario', sans-serif;
+  text-align: center;
+  width: 150px;
 }
   
 #start-game{
-    text-decoration: none;
-    right:35%;
-
+  text-decoration: none;
+  right:35%;
   }
 
 #how-to-play {
-    left:40%;
+  left:40%;
 }
+
+#start-game:hover, #how-to-play:hover {
+  color: #107ff7;
+  }
+
 
 /* Modal styling */
 
@@ -88,7 +85,7 @@
 }
 
 #game-start{
-    text-align: center !important;
+  text-align: center !important;
 }
 
 .modal-btn:hover {
@@ -101,14 +98,61 @@
 /* Game page styling */
 
 #game-body {
-    margin: 0;
-    background: linear-gradient(40deg, #37003A, #FE2881) ; 
-    min-height: 100vh;
+  margin: 0;
+  background: linear-gradient(45deg, #37003A, 75%, #FE2881) ; 
+  min-height: 100vh;
+}
+
+#home-reset {
+  width:100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5%;
 }
 
 .home-button a, .reset-button a{
   text-decoration: none;
   font-family: 'Rosario', sans-serif;
-  font-size: 2em;
+  font-size: 1.25em;
   color: #107ff7;
+  text-align: center;
+}
+
+.home-button {
+  margin-right:2.5%;
+}
+.reset-button {
+  margin-left:2.5%;
+}
+
+#game-data {
+  width:100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 2.5%;
+
+}
+
+.data-flip, #data-time {
+  position:inline;
+  color: black;
+  padding: 7px 0 7px 0;
+  background: #FE2881;
+  
+  border: 1px solid #107ff7;
+  border-radius: 20px;
+
+  text-decoration: none;
+  font-size: 1.25rem;
+  font-family: 'Rosario', sans-serif;
+  text-align: center;
+  width: 130px;
+}
+
+.data-flip {
+  margin-right: 5%;
+}
+
+#data-time {
+  margin-left: 5%;
 }
