@@ -100,8 +100,10 @@ document.addEventListener('DOMContentLoaded', () =>{
     // randomise cards for loading to grid
     gameCards.sort(() => 0.5 - Math.random())
 
-
     const grid = document.querySelector('.grid')
+    var cardsToCompare = []
+    var cardsToCompareID = []
+
 
     //create game board
     function createBoard() {
@@ -110,23 +112,31 @@ document.addEventListener('DOMContentLoaded', () =>{
             var card = document.createElement('img')
             card.setAttribute('src', 'assets/images/prem-logo-blend.png')
             card.setAttribute('data-id', i)
-            //card.addEventListener('click', flipcard)
+            card.addEventListener('click', flipcard)
             grid.appendChild(card)
         }
 
     }
 
+
+    // flip card function
+    function flipcard(){
+        var cardId = this.getAttribute('data-id')
+        cardsToCompare.push(gameCard[cardId].name)
+        cardsToCompareID.push(cardId)
+        this.setAttribute('src', gameCards[cardId].img)
+
+        if (cardsToCompare === 2){
+            //setTimeout(checkForMatch, 500)
+        }
+    }
     createBoard()
 
 
-
-
-
-
-let flips = 0;
-let counter = document.querySelector('.flips');
-function moveCounter() {
-    flips++;
-    counter.innerHTML = `Flips: ${flips}`; 
-}
+    let flips = 0;
+    let counter = document.querySelector('.flips');
+    function moveCounter() {
+        flips++;
+        counter.innerHTML = `Flips: ${flips}`; 
+    }
 })
