@@ -102,11 +102,9 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     const grid = document.querySelector('.grid')
     
-    // arrays for comparing cards and comparing cards IDs
+    // Empty arrays for comparing cards and cards IDs
     var cardsToCompare = []
     var cardsToCompareId = []
-
-
 
 
     //create game board
@@ -122,6 +120,34 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     }
 
+    function checkForMatch() {
+        var cards = document.querySelectorAll('img')
+        const cardOneId = cardsToCompareId[0]
+        const cardTwoId = cardsToCompareId[1]
+
+        console.log(cardOneId)
+        console.log(cardTwoId)
+
+
+        if (cardsToCompare[0] === cardsToCompare[1]) {
+
+            cards[cardOneId].style.opacity = "0";
+            cards[cardTwoId].style.opacity = "0";
+            /*
+            cards[cardOneId].remove('img');
+            cards[cardTwoId].remove('img');
+            document.getElementById("myDIV").style.opacity = "0.5";
+            */
+        }
+        else {
+            cards[cardOneId].setAttribute('src', 'assets/images/prem-logo-blend.png');
+            cards[cardTwoId].setAttribute('src', 'assets/images/prem-logo-blend.png');
+        }
+        cardsToCompare = []
+        cardsToCompareId = []
+
+    }
+
 
     // flip card function
     function flipCard(){
@@ -130,8 +156,8 @@ document.addEventListener('DOMContentLoaded', () =>{
         cardsToCompareId.push(cardId)
         this.setAttribute('src', gameCards[cardId].img)
 
-        if (cardsToCompare === 2){
-            //setTimeout(checkForMatch, 500)
+        if (cardsToCompare.length === 2 ){
+            setTimeout(checkForMatch, 1000)
         }
     }
     createBoard()
