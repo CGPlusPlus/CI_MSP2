@@ -86,9 +86,9 @@ document.addEventListener('DOMContentLoaded', () =>{
     //array to hold 10 randomly selected cards
     const gameCards = [];
     //randomise allCardsArray positioning
-    allCardsArray.sort(() => 0.5 - Math.random())
-
-    var count = 0;
+    for (let run=0; run < 100000; run++){
+        allCardsArray.sort(() => 0.5 - Math.random())
+    }
 
     //select first 10 randomised teams for game 
     for(var imgs = 0; imgs < 10; imgs++) {
@@ -129,22 +129,12 @@ document.addEventListener('DOMContentLoaded', () =>{
         const cardOneId = cardsToCompareId[0]
         const cardTwoId = cardsToCompareId[1]
 
-        console.log(cardOneId)
-        console.log(cardTwoId)
-
-
         if (cardsToCompare[0] === cardsToCompare[1]) {
 
             cards[cardOneId].style.opacity = "0";
             cards[cardTwoId].style.opacity = "0";
             matches++;
-            console.log(matches);
-            /*
-            cards[cardOneId].remove('img');
-            cards[cardTwoId].remove('img');
-            document.getElementById("myDIV").style.opacity = "0.5";
-            */
-
+            
         }
         else {
             cards[cardOneId].setAttribute('src', 'assets/images/prem-logo-blend.png');
@@ -153,14 +143,13 @@ document.addEventListener('DOMContentLoaded', () =>{
         cardsToCompare = []
         cardsToCompareId = []
 
-        if (matches === 1) {
+        if (matches === 10) {
             clearTimeout(interval);
             $('#congratsModal').modal('toggle');
             winningModal(flips, minute, second);
         }
 
     }
-
 
     // flip card function 
     function flipCard(){
@@ -226,7 +215,4 @@ document.addEventListener('DOMContentLoaded', () =>{
         matches = 0;
     }
 
-
-
-    
 })
