@@ -170,6 +170,15 @@
   width:500px;
 }
 
+@media screen and (max-width:400px) {
+  .grid {
+    display:flex;
+    flex-wrap: wrap;
+    height:200px;
+    width:250px;
+  }
+}
+
 /* Congrats Modal styling */
 
 .reset-btn, .home-btn {
