@@ -63,7 +63,7 @@
   color: #107ff7;
 }
 
-/* Modal styling */
+/* Index Modal styling */
 
 .modal-content {
   text-align: left;
@@ -168,4 +168,15 @@
   flex-wrap: wrap;
   height:400px;
   width:500px;
+}
+
+/* Congrats Modal styling */
+
+.reset-btn, .home-btn {
+  text-decoration: none !important;
+}
+
+.reset-btn:hover, .home-btn:hover {
+  color: gold;
+
 }

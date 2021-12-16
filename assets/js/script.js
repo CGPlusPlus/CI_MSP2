@@ -108,6 +108,8 @@ document.addEventListener('DOMContentLoaded', () =>{
     var cardsToCompare = []
     var cardsToCompareId = []
 
+    var matches = 0;
+
 
     //create game board
     function createBoard() {
@@ -135,11 +137,14 @@ document.addEventListener('DOMContentLoaded', () =>{
 
             cards[cardOneId].style.opacity = "0";
             cards[cardTwoId].style.opacity = "0";
+            matches++;
+            console.log(matches);
             /*
             cards[cardOneId].remove('img');
             cards[cardTwoId].remove('img');
             document.getElementById("myDIV").style.opacity = "0.5";
             */
+
         }
         else {
             cards[cardOneId].setAttribute('src', 'assets/images/prem-logo-blend.png');
@@ -147,6 +152,12 @@ document.addEventListener('DOMContentLoaded', () =>{
         }
         cardsToCompare = []
         cardsToCompareId = []
+
+        if (matches === 1) {
+            clearTimeout(interval);
+            $('#congratsModal').modal('toggle');
+            winningModal(flips, minute, second);
+        }
 
     }
 
@@ -184,8 +195,9 @@ document.addEventListener('DOMContentLoaded', () =>{
 
 
     //game timer - code basis from https://github.com/sandraisrael/Memory-Game-fend
+    //started second at 1 as it takes 1 second to load new format before continuing to increment
 
-    var second = 0, minute = 0;
+    var second = 1, minute = 0;
     var timer = document.querySelector("#timer");
     var interval;
     function startTimer(){
@@ -201,7 +213,19 @@ document.addEventListener('DOMContentLoaded', () =>{
                 minute = 0;
             }
         },1000);
+        
     }
+
+    // game winning modal - final second count showing as 1 more than it should, so minused 1 second for equality of data
+    function winningModal(flips, minute, second) {
+        let winModal = document.querySelector('.win');
+        winModal.style.visibility = 'visible';
+        winModal.querySelector('#totalFlips').innerHTML = `You made ${flips} card flips and `;
+        winModal.querySelector('#winTime').innerHTML = `you completed the game in ${minute} minutes and ${second - 1} seconds`;
+
+        matches = 0;
+    }
+
 
 
     
