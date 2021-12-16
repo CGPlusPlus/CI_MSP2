@@ -88,6 +88,8 @@ document.addEventListener('DOMContentLoaded', () =>{
     //randomise allCardsArray positioning
     allCardsArray.sort(() => 0.5 - Math.random())
 
+    var count = 0;
+
     //select first 10 randomised teams for game 
     for(var imgs = 0; imgs < 10; imgs++) {
         gameCards[imgs] = allCardsArray[imgs]
@@ -151,22 +153,31 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     // flip card function
     function flipCard(){
+
         var cardId = this.getAttribute('data-id')
         cardsToCompare.push(gameCards[cardId].name)
         cardsToCompareId.push(cardId)
         this.setAttribute('src', gameCards[cardId].img)
-
+        
+        
         if (cardsToCompare.length === 2 ){
-            setTimeout(checkForMatch, 1000)
+            setTimeout(checkForMatch, 800)
         }
+        // start flip counter
+        flipCounter();
+        
     }
     createBoard()
 
 
     let flips = 0;
     let counter = document.querySelector('.flips');
-    function moveCounter() {
+    
+    // count flips made
+    function flipCounter() {
         flips++;
         counter.innerHTML = `Flips: ${flips}`; 
     }
+
+    
 })
