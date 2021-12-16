@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () =>{
     }
 
 
-    // flip card function
+    // flip card function 
     function flipCard(){
 
         var cardId = this.getAttribute('data-id')
@@ -172,12 +172,37 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     let flips = 0;
     let counter = document.querySelector('.flips');
-    
-    // count flips made
+
+    // count flips made - inspired from https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript#toc-3-moves
     function flipCounter() {
         flips++;
         counter.innerHTML = `Flips: ${flips}`; 
+        if(flips == 1) {
+            startTimer(); 
+        }
     }
+
+
+    //game timer - code basis from https://github.com/sandraisrael/Memory-Game-fend
+
+    var second = 0, minute = 0;
+    var timer = document.querySelector("#timer");
+    var interval;
+    function startTimer(){
+        interval = setInterval(function(){
+            timer.innerHTML = minute+" mins "+second+" secs";
+            second++;
+            if(second == 60){
+                minute++;
+                second = 0;
+            }
+            if(minute == 60){
+                hour++;
+                minute = 0;
+            }
+        },1000);
+    }
+
 
     
 })

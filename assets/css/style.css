@@ -142,15 +142,17 @@
   font-size: 1.25rem;
   font-family: 'Rosario', sans-serif;
   text-align: center;
-  width: 130px;
+  
 }
 
 .data-flip {
   margin-right: 5%;
+  width: 130px;
 }
 
 #data-time {
   margin-left: 5%;
+  width: 180px;
 }
 
 /* Game - Card grid*/
