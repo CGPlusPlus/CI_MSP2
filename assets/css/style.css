@@ -170,14 +170,6 @@
   width:500px;
 }
 
-@media screen and (max-width:400px) {
-  .grid {
-    display:flex;
-    flex-wrap: wrap;
-    height:200px;
-    width:250px;
-  }
-}
 
 /* Congrats Modal styling */
 
@@ -188,4 +180,33 @@
 .reset-btn:hover, .home-btn:hover {
   color: gold;
 
+}
+
+/* Mobile screen Media query */
+
+@media screen and (max-width:400px) {
+  
+  #index-body {
+    margin: 0;
+    background-color: #37003A;
+    background-image: url(../images/PL_Teams_2021_small.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+  }
+
+  #start-game{
+    right:5%;
+    }
+  
+  #how-to-play {
+    left:5%;
+  }
+  
+  .grid {
+    display:flex;
+    flex-wrap: wrap;
+    height:200px;
+    width:250px;
+  }
 }
