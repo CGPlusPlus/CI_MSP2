@@ -53,9 +53,12 @@ Live site: TBD
 ### Wireframes
 
 <details><summary>Home</summary>
-<image src="/assets/docs/home.PNG">
+<image src="assets/images/wireframes/Homepage.png">
 </details> 
 
+<details><summary>Game Page</summary>
+<image src="assets/images/wireframes/Game_page.png">
+</details> 
  
 ### Structure
 As the site has 2 main components; Home page and Game page, navigation should be clear and intuitive. Navigation buttons are highly visible and labelled on each page, where they stand out against the background. 
@@ -78,13 +81,13 @@ This was used as it is a close match to the font used officially for the Premier
     •	How to Play  
     •   Start Game  
 <details><summary>Start Game and How to Play</summary>
-<image src="/assets/images/imgs/homepage.png">
+<image src="assets/images/imgs/homepage.png">
 </details> 
   
 ### How to Play Modal
 •	Once the 'How to Play' button is clicked, a Modal (Screen Overlay) appears with instructions on how to play the game.  
 <details><summary>How to Play modal</summary>
-<image src="/assets/images/imgs/howToPlayModal.png">
+<image src="assets/images/imgs/howToModal.png">
 </details> 
   
 ### Game grid
@@ -92,22 +95,25 @@ This was used as it is a close match to the font used officially for the Premier
 •	It consists of a grid of cards, each of which contains an image of the Premier League crest  
 •   On clicking a card, it flips over revealing a Premier League crest beneath it  
 <details><summary>Game grid</summary>
-<image src="/assets/images/imgs/game_grid.png">
+<image src="assets/images/imgs/game_grid.png">
 </details> 
   
 ### Game data
 •	Above the game grid is the game data  
 •	It contains data on 2 metrics: Flips (no. of cards flipped over) and Time (time from first card click to game finish - stopwatch timer)  
 <details><summary>Game data</summary>
-<image src="/assets/images/imgs/gameData.png">
+<image src="assets/images/imgs/gameData.png">
 </details> 
   
 ### Home and Reset
 •	Above the game data is the gHome and Reset buttons  
 •	The Home button will navigate the User back to the homepage and the Reset button wil rest the game, shuffling the cards positions and resetting the game data values.  
 <details><summary>Home and Reset</summary>
-<image src="/assets/images/imgs/gameReset.png">
+<image src="assets/images/imgs/gameReset.png">
 </details> 
+
+### Features to be implemented
+•   There is currently only 1 level in the game, in future adding further levels with differing dificulties would improve the user experience.
 
 
 ## Technologies Utilised
@@ -128,33 +134,33 @@ This was used as it is a close match to the font used officially for the Premier
 The W3C Nu Html Checker was used to validate the HTML pages.  
 There were 4 errors on the index.html page.
 <details><summary>Home Page errors</summary>
-<image src="/assets/images/imgs/htmlValidation.png">
+<image src="assets/images/imgs/htmlValidation.png">
 </details> 
 
 These errors were fixed by removing stray tags, closing a h4 element as opposed to h3 and chaning from an id to a class element.
 <details><summary>Home Page No Errors</summary>
-<image src="/assets/images/imgs/htmlValidationPostFixes.png">
+<image src="assets/images/imgs/htmlValidationPostFixes.png">
 </details> 
 
 There was also one error on the game.html page.
 <details><summary>Game page errors</summary>
-<image src="/assets/images/imgs/htmlValidationGamePage.png">
+<image src="assets/images/imgs/htmlValidationGamePage.png">
 </details> 
 
 This was solved by removing a stray tag.
 <details><summary>Game page No Errors</summary>
-<image src="/assets/images/imgs/htmlValidationGamePagePostFix.png">
+<image src="assets/images/imgs/htmlValidationGamePagePostFix.png">
 </details> 
 
 ### Performance
 Google Lighthouse in Chrome Developer Tools was used to check the website performance indicators. The pages performance readings are below:
 
 <details><summary>Home page Performance</summary>
-<image src="/assets/images/imgs/home_page_performance.png">
+<image src="assets/images/imgs/home_page_performance.png">
 </details>
 
 <details><summary>Game page Performance</summary>
-<image src="/assets/images/imgs/game_page_performance.png">
+<image src="assets/images/imgs/game_page_performance.png">
 </details>
   
 

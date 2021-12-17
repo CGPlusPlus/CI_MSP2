@@ -239,7 +239,19 @@ document.addEventListener('DOMContentLoaded', () =>{
         const cardOneId = cardsToCompareId[0]
         const cardTwoId = cardsToCompareId[1]
 
-        if (cardsToCompare[0] === cardsToCompare[1]) {
+        if(cardOneId === cardTwoId){
+            alert('You have selected the same card, please try again!')
+            if (x.matches) { // If media query matches
+                cards[cardOneId].setAttribute('src', 'assets/images/50x50/prem-logo-blend.png')
+                cards[cardTwoId].setAttribute('src', 'assets/images/50x50/prem-logo-blend.png')        
+            } else {
+                cards[cardOneId].setAttribute('src', 'assets/images/100x100/prem-logo-blend.png')
+                cards[cardTwoId].setAttribute('src', 'assets/images/100x100/prem-logo-blend.png')
+            }
+
+        }
+
+        if (cardsToCompare[0] === cardsToCompare[1] && cardOneId != cardTwoId ) {
 
             cards[cardOneId].style.opacity = "0"
             cards[cardTwoId].style.opacity = "0"
@@ -276,6 +288,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         this.setAttribute('src', gameCards[cardId].img)
         
         if (cardsToCompare.length === 2 ){
+            //card.removeEventListener('click', setTimeout(checkForMatch, 800))
             setTimeout(checkForMatch, 800)
         }
         // start flip counter
