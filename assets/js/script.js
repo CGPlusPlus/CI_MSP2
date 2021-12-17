@@ -240,7 +240,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         const cardTwoId = cardsToCompareId[1]
 
         if(cardOneId === cardTwoId){
-            alert('You have selected the same card, please try again!')
+            alert('You have selected the same card twice, please only select different cards for matching!')
             if (x.matches) { // If media query matches
                 cards[cardOneId].setAttribute('src', 'assets/images/50x50/prem-logo-blend.png')
                 cards[cardTwoId].setAttribute('src', 'assets/images/50x50/prem-logo-blend.png')        
@@ -248,15 +248,21 @@ document.addEventListener('DOMContentLoaded', () =>{
                 cards[cardOneId].setAttribute('src', 'assets/images/100x100/prem-logo-blend.png')
                 cards[cardTwoId].setAttribute('src', 'assets/images/100x100/prem-logo-blend.png')
             }
-
         }
 
         if (cardsToCompare[0] === cardsToCompare[1] && cardOneId != cardTwoId ) {
 
             cards[cardOneId].style.opacity = "0"
             cards[cardTwoId].style.opacity = "0"
-            matches++;
-            
+
+            if (x.matches) { // If media query matches
+                cards[cardOneId].removeEventListener('click', flipCardSmall)
+                cards[cardTwoId].removeEventListener('click', flipCardSmall)        
+            } else {
+                cards[cardOneId].removeEventListener('click', flipCard)
+                cards[cardTwoId].removeEventListener('click', flipCard)
+            }
+            matches++; 
         }
         else {
             if (x.matches) { // If media query matches
@@ -278,7 +284,6 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     }
 
-
     // flip card function 
     function flipCard(){
 
@@ -288,8 +293,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         this.setAttribute('src', gameCards[cardId].img)
         
         if (cardsToCompare.length === 2 ){
-            //card.removeEventListener('click', setTimeout(checkForMatch, 800))
-            setTimeout(checkForMatch, 800)
+            setTimeout(checkForMatch, 1000)
         }
         // start flip counter
         flipCounter();
@@ -305,11 +309,10 @@ document.addEventListener('DOMContentLoaded', () =>{
         this.setAttribute('src', gameCardsSmall[cardId].img)
         
         if (cardsToCompare.length === 2 ){
-            setTimeout(checkForMatch, 800)
+            setTimeout(checkForMatch, 600)
         }
         // start flip counter
-        flipCounter();
-        
+        flipCounter(); 
     }
 
     function myFunction(x) {

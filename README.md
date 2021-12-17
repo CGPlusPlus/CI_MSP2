@@ -1,6 +1,6 @@
 # Premier League Flip
-Developed by: Conor Gorman
-Live site: TBD
+Developed by: Conor Gorman  
+Live site: https://cgplusplus.github.io/CI_MSP2/
 
 ## Project Goals
 ### End-User Goals
@@ -178,8 +178,9 @@ All issues encountered were to do with Javascript. These included:
     But the teams needed to be a random 10 teams. This meant I needed to utilise 2 arrays, one with all teams and one with a random 10 teams.  
     Using random sort function to ensure data was random, I could then select the first 10 teams for the second array.  
 
-•   There is a still persisting issue with selecting the same tile will make a match.  
-    Unfortunately this is an unsolved issue.  
+•   There was an issue were selecting the same tile twice would make an incorrect match.  
+    To solve this I checked for the card ID and compared them.  
+    If the IDs are the same, the browser throws an alert to the User asking to select two different cards and resets the flipped images.
 
 •   There is also an issue where selecting more than 2 cards before the setTimeout expires causes a glitch.  
     The glitch will cause the 3rd or subsequent card to stay 'revealed'.  
@@ -188,20 +189,20 @@ All issues encountered were to do with Javascript. These included:
  
 ## Deployment
 
-This website was deployed using GitHub Pages following these steps:
-•	In the GitHub repository click on the settings tab at the top
-•	On the left menu scroll down to ‘Pages’
-•	For the source select 'main'. Click Save
-•	The page will refresh and display a highlighted section with a message stating: "Your website is published at https://cgplusplus.github.io/CI_MSP2/“
+This website was deployed using GitHub Pages following these steps:  
+•	In the GitHub repository click on the settings tab at the top  
+•	On the left menu scroll down to ‘Pages’  
+•	For the source select 'main'. Click Save  
+•	The page will refresh and display a highlighted section with a message stating: "Your website is published at https://cgplusplus.github.io/CI_MSP2/“  
 
-The repository can be cloned by following the below steps:
-•	Navigate  to the GitHub repository
-•	Click on 'Code' at the top of the repository
-•	Select to clone either HTML, SSH or GitHub CLI
-•	Go to the working directory you wish to work from
-•	Go to Git Bash
-•	Type git clone and paste the URL from your clipboard ($ git clone https://github.com/USERNAME/REPOSITORY)
-•	Press enter to create your clone
+The repository can be cloned by following the below steps:  
+•	Navigate  to the GitHub repository  
+•	Click on 'Code' at the top of the repository  
+•	Select to clone either HTML, SSH or GitHub CLI  
+•	Go to the working directory you wish to work from  
+•	Go to Git Bash  
+•	Type git clone and paste the URL from your clipboard ($ git clone https://github.com/USERNAME/REPOSITORY)  
+•	Press enter to create your clone  
 
 ## Acknowledgements
 ### Media
