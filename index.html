@@ -12,46 +12,43 @@
     <div>
         <div id="index-heading"> 
             <h1>Premier League Flip</h1>
-            <h4><em>A Premier League inspired spin on the classic family game <a href="https://en.wikipedia.org/wiki/Concentration_(card_game)" target="_blank">Concentration</a></em></h3>
+            <h4><em>A Premier League inspired spin on the classic family game <a href="https://en.wikipedia.org/wiki/Concentration_(card_game)" target="_blank" rel="noopener">Concentration</a></em></h4>
         </div>
         <div>
-            <span id="index-buttons">
-                <button id="how-to-play" type="button" data-toggle="modal" data-target="#HowToModal">How to Play</button>
+            <span class="index-buttons">
+                <button id="how-to-play" type="button" data-toggle="modal" data-target="#HowToModal" aria-label="How to Play">How to Play</button>
             </span>
-            <span id="index-buttons">
-                <a id="start-game" href="game.html" role="button">Start Game</a>
+            <span class="index-buttons">
+                <a id="start-game" href="game.html" role="button" aria-label="Start Game">Start Game</a>
             </span>
         </div>
 
         <div class="modal fade" tabindex="-1" role="dialog" id="HowToModal">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header text-center d-block">
-                            <h2 class="modal-title d-inline-block">How To Play</h2>
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header text-center d-block">
+                        <h2 class="modal-title d-inline-block">How To Play</h2>
 
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <ul class="how-to-play">
-                                <li>To start the game, click on any card</li>
-                                <li>Clicking on cards will flip them over, to reveal a Teams crest</li>
-                                <li>The aim of the game is to match 2 of the same crest by flipping them over consecutively</li>
-                                <li>Selecting 2 Unmatched crests will flip them back over, testing the Players memory</li>
-                                <li>You have 60 seconds to match all Team crests; doing so in as little moves as possible will gain you a better star rating.</li>
-                                <li>Clicking reset will restart your game</li>
-                            </ul>
-                            <div id="game-start">
-                                <a class="modal-btn" href="game.html">Start Game</a>
-                            </div>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <ul class="how-to-play">
+                            <li>To start the game, click on any card</li>
+                            <li>Clicking on cards will flip them over, to reveal a Teams crest</li>
+                            <li>The aim of the game is to match 2 of the same crest by flipping them over consecutively</li>
+                            <li>Selecting 2 Unmatched crests will flip them back over, testing the Players memory</li>
+                            <li>You have 60 seconds to match all Team crests; doing so in as little moves as possible will gain you a better star rating.</li>
+                            <li>Clicking reset will restart your game</li>
+                        </ul>
+                        <div id="game-start">
+                            <a class="modal-btn" href="game.html">Start Game</a>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div>     
         </div> 
     </div>
-
-
 
     <!-- bootstrap and jquery for modal -->
     <script src="https://code.jquery.com/jquery-3.5.1.js"></script>

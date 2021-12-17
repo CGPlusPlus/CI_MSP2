@@ -1,108 +1,239 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Premier League Flip
+Developed by: Conor Gorman
+Live site: TBD
 
-Welcome CGPlusPlus,
+## Project Goals
+### End-User Goals
+•	Finding a simple interactive game to play  
+•	Find a game that has a certain familiarity to it in two ways; function and content  
+•	If unfamiliar, User requires a way to understand game rules  
+•	Ability to play differing levels of difficulty of the same game  
+•	Ability to track progress as User moves through game / levels  
+•   Easily Restart game at users request  
+•   Easy to navigate site that is intuitive and interactive  
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+### Site-Owner Goals
+•	Provide end-users an easy to play game that is fun and interactive  
+•	Ensure users continue to play by keeping engaged; most likely through increasing difficulty/levels  
+•	Functions of site should include:  
+    •	Randomising of cards on game load or user reset  
+    •   Display current game progress to user  
+    •   Allow user to restart game at their request  
+    •   Let user know when they have completed game/level  
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+## User Experience
+### Target Audience
+•	People who play online games  
+•	People who support/know football teams in the English Premier League  
+•	People who are looking to kill time with a fun game  
+•	People looking to test their memory with a fun game  
+### End-User Expectations
+•	Game is fun to play and responds to user input  
+•	Website layout is intuitive and easy to navigate  
+•	Game will display current game progress   
+•	Cards positioning will change with each restart/attempt of game  
+•	Game will let user know when they have complete/finished a level  
 
-## Gitpod Reminders
+## User Stories
+### First Time User
+•	As a first-time User, I want to understand what Premier League Flip has to offer  
+•	As a first-time User, I want to play a fun easy to play game  
+•	As a first-time User, I want to be able to intuitively navigate the website and find what I am looking for
+•	As a first-time User, if I don't know how to play the game, i'd like to be able to locate game rules / how to play tutorial  
+### Returning User
+•	As a returning User, I want to be able to replay the game i played last time I visited the site  
+•	As a returning User, I want to have the possibility to increase game difficulty  
+•	As a returning User, I would like the navigation of the website to remain the same   
+### Site Owner
+•	As Site Owner, I want User to return to use the site  
+•	As Site Owner, I want Users to be able to intuitively navigate the website.  
+•	As Site Owner, I would like users to information available on-site on how to play the game  
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Design
+### Wireframes
 
-`python3 -m http.server`
+<details><summary>Home</summary>
+<image src="/assets/docs/home.PNG">
+</details> 
 
-A blue button should appear to click: _Make Public_,
+ 
+### Structure
+As the site has 2 main components; Home page and Game page, navigation should be clear and intuitive. Navigation buttons are highly visible and labelled on each page, where they stand out against the background. 
+From the wireframes above, there are 2 pages:
+1.	The home page has a large hero image and will have a How to Play button and a Start Game button.
+    Along with this, the How to Play will open a Modal with game instructions
+2.	The game page will be front and center of the page, with 2 separate buttons for returning to homepage (Home) and also restarting the game (Reset)
 
-Another blue button should appear to click: _Open Browser_.
+### Website Layout
+The website layout needed to be simple yet contain all the information required.
+In order to avoid the need for scrolling, all contants are contained within the main viewport.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Fonts
+A single main font was imported from Google fonts; Rosario.
+This was used as it is a close match to the font used officially for the Premier League logo.
 
-A blue button should appear to click: _Make Public_,
+## Site Features
+### 'Start Game' and 'How to Play'
+•	On the Homepage there is 2 buttons located at the bottom:  
+    •	How to Play  
+    •   Start Game  
+<details><summary>Start Game and How to Play</summary>
+<image src="/assets/images/imgs/homepage.png">
+</details> 
+  
+### How to Play Modal
+•	Once the 'How to Play' button is clicked, a Modal (Screen Overlay) appears with instructions on how to play the game.  
+<details><summary>How to Play modal</summary>
+<image src="/assets/images/imgs/howToPlayModal.png">
+</details> 
+  
+### Game grid
+•	The game grid is located on the game.html page  
+•	It consists of a grid of cards, each of which contains an image of the Premier League crest  
+•   On clicking a card, it flips over revealing a Premier League crest beneath it  
+<details><summary>Game grid</summary>
+<image src="/assets/images/imgs/game_grid.png">
+</details> 
+  
+### Game data
+•	Above the game grid is the game data  
+•	It contains data on 2 metrics: Flips (no. of cards flipped over) and Time (time from first card click to game finish - stopwatch timer)  
+<details><summary>Game data</summary>
+<image src="/assets/images/imgs/gameData.png">
+</details> 
+  
+### Home and Reset
+•	Above the game data is the gHome and Reset buttons  
+•	The Home button will navigate the User back to the homepage and the Reset button wil rest the game, shuffling the cards positions and resetting the game data values.  
+<details><summary>Home and Reset</summary>
+<image src="/assets/images/imgs/gameReset.png">
+</details> 
 
-Another blue button should appear to click: _Open Browser_.
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+## Technologies Utilised
+### Languages
+•	HTML  
+•	CSS  
+•   JavaScript  
+### Tools 
+•	Git  
+•	Github  
+•	Gitpod  
+•	Font Awesome v5.15  
+•	Google Fonts  
+•	Balsamiq  
 
-To log into the Heroku toolbelt CLI:
+## Validation
+### HTML Validation
+The W3C Nu Html Checker was used to validate the HTML pages.  
+There were 4 errors on the index.html page.
+<details><summary>Home Page errors</summary>
+<image src="/assets/images/imgs/htmlValidation.png">
+</details> 
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+These errors were fixed by removing stray tags, closing a h4 element as opposed to h3 and chaning from an id to a class element.
+<details><summary>Home Page No Errors</summary>
+<image src="/assets/images/imgs/htmlValidationPostFixes.png">
+</details> 
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+There was also one error on the game.html page.
+<details><summary>Game page errors</summary>
+<image src="/assets/images/imgs/htmlValidationGamePage.png">
+</details> 
 
-------
+This was solved by removing a stray tag.
+<details><summary>Game page No Errors</summary>
+<image src="/assets/images/imgs/htmlValidationGamePagePostFix.png">
+</details> 
 
-## Release History
+### Performance
+Google Lighthouse in Chrome Developer Tools was used to check the website performance indicators. The pages performance readings are below:
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+<details><summary>Home page Performance</summary>
+<image src="/assets/images/imgs/home_page_performance.png">
+</details>
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+<details><summary>Game page Performance</summary>
+<image src="/assets/images/imgs/game_page_performance.png">
+</details>
+  
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+## Issues
+All issues encountered were to do with Javascript. These included:  
+•   An issue in determining how to remove cards from the grid once matched.  
+    The below was attempted - however it would remove the tile as a whole and meant the grid would move and ruin the flow of the game, making it impossible to remember positioning of cards.  
+    cards[cardOneId].remove('img');  
+    cards[cardTwoId].remove('img');  
+    As an alternative approach, I went with the below code; setting an opacity level to '0' basically making the images transparent.  
+    cards[cardOneId].style.opacity = "0"  
+    cards[cardTwoId].style.opacity = "0"  
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+•   There is 20 teams in the Premier League (PL), but we only needed 10 teams to complete the game grid.  
+    But the teams needed to be a random 10 teams. This meant I needed to utilise 2 arrays, one with all teams and one with a random 10 teams.  
+    Using random sort function to ensure data was random, I could then select the first 10 teams for the second array.  
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+•   There is a still persisting issue with selecting the same tile will make a match.  
+    Unfortunately this is an unsolved issue.  
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+•   There is also an issue where selecting more than 2 cards before the setTimeout expires causes a glitch.  
+    The glitch will cause the 3rd or subsequent card to stay 'revealed'.  
+    Unfortunately this is also an unsolved issue.  
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+ 
+## Deployment
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+This website was deployed using GitHub Pages following these steps:
+•	In the GitHub repository click on the settings tab at the top
+•	On the left menu scroll down to ‘Pages’
+•	For the source select 'main'. Click Save
+•	The page will refresh and display a highlighted section with a message stating: "Your website is published at https://cgplusplus.github.io/CI_MSP2/“
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+The repository can be cloned by following the below steps:
+•	Navigate  to the GitHub repository
+•	Click on 'Code' at the top of the repository
+•	Select to clone either HTML, SSH or GitHub CLI
+•	Go to the working directory you wish to work from
+•	Go to Git Bash
+•	Type git clone and paste the URL from your clipboard ($ git clone https://github.com/USERNAME/REPOSITORY)
+•	Press enter to create your clone
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+## Acknowledgements
+### Media
+•	Main Homepage Image: https://knowinsiders.com/stores/news_dataimages/triduongvnt/052021/23/13/in_article/1144_premier-league-2021-2022-list-all-team-clubs.jpg?rt=20210523131148 
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+•	Premier League Logo Image: https://obamabcn.com/wp-content/uploads/2019/11/logo-premier-league.jpg
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+•	Team Images: 
+man_city.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png  
+man_united.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/800px-Manchester_United_FC_crest.svg.png  
+liverpool.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Liverpool_FC.svg/800px-Liverpool_FC.svg.png  
+chelsea.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/c/cc/Chelsea_FC.svg/800px-Chelsea_FC.svg.png  
+arsenal.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/5/53/Arsenal_FC.svg/800px-Arsenal_FC.svg.png  
+west_ham.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/c/c2/West_Ham_United_FC_logo.svg/800px-West_Ham_United_FC_logo.svg.png  
+spurs.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/b/b4/Tottenham_Hotspur.svg/800px-Tottenham_Hotspur.svg.png  
+leicester.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/2/2d/Leicester_City_crest.svg/800px-Leicester_City_crest.svg.png  
+aston_villa.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/f/f9/Aston_Villa_FC_crest_%282016%29.svg/800px-Aston_Villa_FC_crest_%282016%29.svg.png  
+wolves.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/f/fc/Wolverhampton_Wanderers.svg/800px-Wolverhampton_Wanderers.svg.png  
+brentford.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/2/2a/Brentford_FC_crest.svg/800px-Brentford_FC_crest.svg.png  
+brighton.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/f/fd/Brighton_%26_Hove_Albion_logo.svg/800px-Brighton_%26_Hove_Albion_logo.svg.png  
+palace.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/0/0c/Crystal_Palace_FC_logo.svg/800px-Crystal_Palace_FC_logo.svg.png  
+everton.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/7/7c/Everton_FC_logo.svg/800px-Everton_FC_logo.svg.png  
+southampton.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/c/c9/FC_Southampton.svg/800px-FC_Southampton.svg.png  
+leeds.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/5/54/Leeds_United_F.C._logo.svg/800px-Leeds_United_F.C._logo.svg.png  
+watford.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/e/e2/Watford.svg/800px-Watford.svg.png  
+burnley.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/6/62/Burnley_F.C._Logo.svg/800px-Burnley_F.C._Logo.svg.png  
+newcastle.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/5/56/Newcastle_United_Logo.svg/800px-Newcastle_United_Logo.svg.png  
+norwich.png - link: https://upload.wikimedia.org/wikipedia/en/thumb/8/8c/Norwich_City.svg/800px-Norwich_City.svg.png  
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+•	Icons: Font Awesome - https://fontawesome.com/  
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+### Code
+•	Code Institute - Love Maths project: While creating this website/game, this tutorial served as a tutorial for basic Javascript functionality.  
 
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!
+#### Resources:
+Modal information - https://getbootstrap.com/docs/4.0/components/modal/  
+JS and Jquery links - https://getbootstrap.com/docs/4.0/getting-started/introduction/  
+JS inspired by Ania Kubow @ https://www.youtube.com/watch?v=tjyDOHzKN0w  
+some JS inspired by https://scotch.io/tutorials/how-to-build-a-memory-matching-game-in-javascript#toc-3-moves  
+some JS inspired by https://github.com/sandraisrael/Memory-Game-fend  

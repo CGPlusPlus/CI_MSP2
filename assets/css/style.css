@@ -27,7 +27,7 @@
   text-transform: uppercase;
 }
 
-#index-buttons {
+.index-buttons {
   justify-content: center;
   display: flex;
   margin: 0.625rem;

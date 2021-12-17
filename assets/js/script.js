@@ -3,83 +3,83 @@ document.addEventListener('DOMContentLoaded', () =>{
     //load all card options
     const allCardsArray = [{
         name: 'Arsenal',
-        img: 'assets/images/arsenal.png'
+        img: 'assets/images/100x100/arsenal.png'
     },
     {
         name: 'Aston Villa',
-        img: 'assets/images/aston_villa.png'
+        img: 'assets/images/100x100/aston_villa.png'
     },
     {
         name: 'Brentford',
-        img: 'assets/images/brentford.png'
+        img: 'assets/images/100x100/brentford.png'
     },
     {
         name: 'Brighton',
-        img: 'assets/images/brighton.png'
+        img: 'assets/images/100x100/brighton.png'
     },
     {
         name: 'Burnley',
-        img: 'assets/images/burnley.png'
+        img: 'assets/images/100x100/burnley.png'
     },
     {
         name: 'Chelsea',
-        img: 'assets/images/chelsea.png'
+        img: 'assets/images/100x100/chelsea.png'
     },
     {
         name: 'Everton',
-        img: 'assets/images/everton.png'
+        img: 'assets/images/100x100/everton.png'
     },
     {
         name: 'Leeds',
-        img: 'assets/images/leeds.png'
+        img: 'assets/images/100x100/leeds.png'
     },
     {
         name: 'Leicester',
-        img: 'assets/images/leicester.png'
+        img: 'assets/images/100x100/leicester.png'
     },
     {
         name: 'Liverpool',
-        img: 'assets/images/liverpool.png'
+        img: 'assets/images/100x100/liverpool.png'
     },
     {
         name: 'Man United',
-        img: 'assets/images/man_united.png'
+        img: 'assets/images/100x100/man_united.png'
     },
     {
         name: 'Man City',
-        img: 'assets/images/man_city.png'
+        img: 'assets/images/100x100/man_city.png'
     },
     {
         name: 'Newcastle',
-        img: 'assets/images/newcastle.png'
+        img: 'assets/images/100x100/newcastle.png'
     },
     {
         name: 'Norwich',
-        img: 'assets/images/norwich.png'
+        img: 'assets/images/100x100/norwich.png'
     },
     {
         name: 'C. Palace',
-        img: 'assets/images/palace.png'
+        img: 'assets/images/100x100/palace.png'
     },
     {
         name: 'S.hampton',
-        img: 'assets/images/southampton.png'
+        img: 'assets/images/100x100/southampton.png'
     },
     {
         name: 'Tottenham',
-        img: 'assets/images/spurs.png'
+        img: 'assets/images/100x100/spurs.png'
     },
     {
         name: 'Watford',
-        img: 'assets/images/watford.png'
+        img: 'assets/images/100x100/watford.png'
     },
     {
         name: 'West Ham',
-        img: 'assets/images/west_ham.png'
+        img: 'assets/images/100x100/west_ham.png'
     },
     {
         name: 'Wolves',
-        img: 'assets/images/wolves.png'
+        img: 'assets/images/100x100/wolves.png'
     }
     ];
 
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', () =>{
         for (let i=0; i<allCardsArray.length; i++)
         {
             var card = document.createElement('img')
-            card.setAttribute('src', 'assets/images/prem-logo-blend.png')
+            card.setAttribute('src', 'assets/images/100x100/prem-logo-blend.png')
             card.setAttribute('data-id', i)
             card.addEventListener('click', flipCard)
             grid.appendChild(card)
@@ -251,8 +251,8 @@ document.addEventListener('DOMContentLoaded', () =>{
                 cards[cardOneId].setAttribute('src', 'assets/images/50x50/prem-logo-blend.png')
                 cards[cardTwoId].setAttribute('src', 'assets/images/50x50/prem-logo-blend.png')        
             } else {
-                cards[cardOneId].setAttribute('src', 'assets/images/prem-logo-blend.png')
-                cards[cardTwoId].setAttribute('src', 'assets/images/prem-logo-blend.png')
+                cards[cardOneId].setAttribute('src', 'assets/images/100x100/prem-logo-blend.png')
+                cards[cardTwoId].setAttribute('src', 'assets/images/100x100/prem-logo-blend.png')
             }
         }
         cardsToCompare = []
